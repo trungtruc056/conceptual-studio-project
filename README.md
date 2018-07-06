@@ -1,2 +1,2 @@
-# conceptual-studio-project
-Home Page Conceptual Studio
+# org-chart-project
+Home Page Org Chart
