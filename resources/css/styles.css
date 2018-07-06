@@ -1,0 +1,117 @@
+/* Import reference file scss */
+/* Reset  CSS */
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none; }
+
+body {
+  color: #333;
+  font-family: 'Roboto', 'Serif'; }
+
+a {
+  text-decoration: none; }
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px; }
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 750px; } }
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 970px; } }
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px; } }
+
+.org-chart {
+  text-align: center; }
+  .org-chart ul {
+    padding-top: 20px;
+    position: relative; }
+    .org-chart ul li {
+      list-style-type: none;
+      display: block;
+      float: left;
+      text-align: center;
+      list-style-type: none;
+      position: relative;
+      padding: 20px 5px 0 5px;
+      transition: all 0.5s;
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s; }
+      .org-chart ul li:only-child {
+        padding-top: 0; }
+      .org-chart ul li:before, .org-chart ul li:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 50%;
+        border-top: 1px solid #ccc;
+        width: 50%;
+        height: 20px; }
+      .org-chart ul li:after {
+        right: auto;
+        left: 50%;
+        border-left: 1px solid #ccc; }
+      .org-chart ul li:last-child::before {
+        border-right: 1px solid #ccc;
+        border-radius: 0 5px 0 0;
+        -webkit-border-radius: 0 5px 0 0;
+        -moz-border-radius: 0 5px 0 0; }
+      .org-chart ul li:first-child::before, .org-chart ul li:last-child::after {
+        border: 0 none; }
+      .org-chart ul li .org-item {
+        border: 1px solid #ccc;
+        display: inline-block;
+        width: 210px;
+        border-top: 5px solid orange;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s; }
+        .org-chart ul li .org-item .item-avatar {
+          display: inline-block;
+          float: left;
+          width: 60px;
+          height: 60px;
+          padding: 10px; }
+          .org-chart ul li .org-item .item-avatar img {
+            max-width: 100%;
+            height: auto;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%; }
+        .org-chart ul li .org-item .item-info {
+          width: 50%;
+          display: inline-block;
+          vertical-align: top;
+          padding: 10px;
+          text-align: left; }
+          .org-chart ul li .org-item .item-info .item-name {
+            font-size: 16px;
+            text-transform: uppercase;
+            padding-bottom: 5px;
+            color: rgba(0, 0, 0, 0.38);
+            font-weight: 500; }
+          .org-chart ul li .org-item .item-info .item-position {
+            font-size: 16px; }
+    .org-chart ul ul:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      border-left: 1px solid #ccc;
+      width: 0;
+      height: 20px; }
+      .org-chart ul ul:before:only-child {
+        height: 40px; }

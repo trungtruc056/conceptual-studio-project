@@ -1,0 +1,118 @@
+/* Import reference file scss */
+@import "mixin.scss";
+@import "color.scss";
+@import "main.scss";
+
+.org-chart {
+  text-align: center;
+
+  ul {
+    padding-top: 20px;
+    position: relative;
+
+    li {
+      list-style-type: none;
+      display: block;
+      float: left;
+      text-align: center;
+      list-style-type: none;
+      position: relative;
+      padding: 20px 5px 0 5px;
+      transition: all 0.5s;
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+
+      &:only-child {
+        padding-top: 0;
+      }
+
+      &:before, &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 50%;
+        border-top: 1px solid #ccc;
+        width: 50%;
+        height: 20px;
+
+      }
+
+      &:after {
+        right: auto;
+        left: 50%;
+        border-left: 1px solid #ccc;
+      }
+
+      &:last-child::before {
+        border-right: 1px solid #ccc;
+        border-radius: 0 5px 0 0;
+        -webkit-border-radius: 0 5px 0 0;
+        -moz-border-radius: 0 5px 0 0;
+      }
+
+      &:first-child::before, &:last-child::after {
+        border: 0 none;
+      }
+
+      .org-item {
+        border: 1px solid #ccc;
+        display: inline-block;
+        width: 210px;
+        border-top: 5px solid orange;
+
+        @include transition(all 0.5s);
+
+        .item-avatar {
+          display: inline-block;
+          float: left;
+          width: 60px;
+          height: 60px;
+          padding: 10px;
+
+          img {
+            max-width: 100%;
+            height: auto;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+
+            @include border-radius(50%);
+          }
+        }
+
+        .item-info {
+          width: 50%;
+          display: inline-block;
+          vertical-align: top;
+          padding: 10px;
+          text-align: left;;
+          
+          .item-name {
+            font-size: 16px;
+            text-transform: uppercase;
+            padding-bottom: 5px;
+            color: rgba(0,0,0,.38);
+            font-weight: 500;
+          }
+
+          .item-position {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    ul:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      border-left: 1px solid #ccc;
+      width: 0;
+      height: 20px;
+
+      &:only-child {
+        height: 40px;
+      }
+    }
+  }
+}
