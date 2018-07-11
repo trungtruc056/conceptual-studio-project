@@ -6,13 +6,12 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" media="screen" href="./resources/css/styles.css" />
-    <script src="./resources/js/main.js"></script>
 </head>
 <body>
     <div class="container">
         <div class="org-chart">
-            <ul>
-                <li>
+            <ul id="rootUl">
+                <li id="rootLi">
                     <div class="org-item">
                         <div class="item-avatar">
                             <img src="./resources/images/person1.png" alt="person1">
@@ -21,6 +20,7 @@
                             <p class="item-name">Parent</p>
                             <p class="item-position">Pro CEO</p>
                         </div>
+                        <div class="button"></div>
                     </div>
                     <ul>
                         <li>
@@ -99,4 +99,6 @@
         </div>
     </div>
 </body>
+<script src="./resources/js/jquery-3.3.1.min.js"></script>
+<script src="./resources/js/main.js"></script>
 </html>

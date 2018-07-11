@@ -73,10 +73,21 @@ a {
         display: inline-block;
         width: 210px;
         border-top: 5px solid orange;
+        cursor: pointer;
         -webkit-transition: all 0.5s;
         -moz-transition: all 0.5s;
         -o-transition: all 0.5s;
         transition: all 0.5s; }
+        .org-chart ul li .org-item .button {
+          width: 20px;
+          height: 20px;
+          border: 1px solid red;
+          background-color: red;
+          border-radius: 100%;
+          position: absolute;
+          left: 48.8%;
+          margin-top: 9px;
+          z-index: 2; }
         .org-chart ul li .org-item .item-avatar {
           display: inline-block;
           float: left;
@@ -113,5 +124,7 @@ a {
       border-left: 1px solid #ccc;
       width: 0;
       height: 20px; }
-      .org-chart ul ul:before:only-child {
-        height: 40px; }
+    .org-chart ul ul ul:before {
+      height: 40px; }
+    .org-chart ul ul ul li:only-child {
+      padding-top: 20px; }

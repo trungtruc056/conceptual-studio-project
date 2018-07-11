@@ -59,8 +59,21 @@
         display: inline-block;
         width: 210px;
         border-top: 5px solid orange;
+        cursor: pointer;
 
         @include transition(all 0.5s);
+
+        .button {
+          width: 20px;
+          height: 20px;
+          border: 1px solid red;
+          background-color: red;
+          border-radius: 100%;
+          position: absolute;
+          left: 48.8%;
+          margin-top: 9px;
+          z-index: 2;
+        }
 
         .item-avatar {
           display: inline-block;
@@ -101,17 +114,25 @@
       }
     }
 
-    ul:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 50%;
-      border-left: 1px solid #ccc;
-      width: 0;
-      height: 20px;
+    ul {
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        border-left: 1px solid #ccc;
+        width: 0;
+        height: 20px;
+      }
 
-      &:only-child {
-        height: 40px;
+      ul {
+        &:before {
+          height: 40px;
+        }
+
+        li:only-child {
+          padding-top: 20px;
+        }
       }
     }
   }
